@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: Apache-2.0
 
 import logging
-from pyhocon import ConfigTree  # noqa: F401
-from typing import Any  # noqa: F401
+from pyhocon import ConfigTree
+from typing import Any
 
 from databuilder.transformer.base_transformer import Transformer
 
@@ -24,13 +24,11 @@ class RegexStrReplaceTransformer(Transformer):
     Any non-string values will be ignored.
     """
 
-    def init(self, conf):
-        # type: (ConfigTree) -> None
+    def init(self, conf: ConfigTree) -> None:
         self._regex_replace_tuples = conf.get_list(REGEX_REPLACE_TUPLE_LIST)
         self._attribute_name = conf.get_string(ATTRIBUTE_NAME)
 
-    def transform(self, record):
-        # type: (Any) -> Any
+    def transform(self, record: Any) -> Any:
 
         if isinstance(record, dict):
             val = record.get(self._attribute_name)
@@ -50,6 +48,5 @@ class RegexStrReplaceTransformer(Transformer):
 
         return record
 
-    def get_scope(self):
-        # type: () -> str
+    def get_scope(self) -> str:
         return 'transformer.regex_str_replace'

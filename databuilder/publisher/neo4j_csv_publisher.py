@@ -143,7 +143,7 @@ class Neo4jCsvPublisher(Publisher):
                                  encrypted=conf.get_bool(NEO4J_ENCRYPTED),
                                  #trust=trust
                                  )
-        self._transaction_size = conf.get_int(NEO4J_TRANSCATION_SIZE)
+        self._transaction_size = conf.get_int(NEO4J_TRANSACTION_SIZE)
 
         self._session = self._driver.session()
         self._confirm_rel_created = conf.get_bool(NEO4J_RELATIONSHIP_CREATION_CONFIRM)

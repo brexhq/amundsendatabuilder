@@ -8,7 +8,7 @@ __version__ = '4.3.1'
 
 
 requirements = [
-    "neo4j-driver>=1.7.2,<4.0",
+    "neo4j==4.1.1",
     "pytz>=2018.4",
     "statsd>=3.2.1",
     "retrying>=1.3.3",
@@ -17,7 +17,7 @@ requirements = [
     "pyhocon>=0.3.42",
     "unidecode",
     "Jinja2>=2.10.0,<2.12",
-    "pandas>=0.21.0,<1.2.0",
+    "pandas>=0.21.0",
     "amundsen-rds>=0.0.4"
 ]
 

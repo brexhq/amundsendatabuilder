@@ -58,11 +58,10 @@ unicodecsv==0.14.1,<1.0
 httplib2>=0.18.0
 unidecode
 Jinja2>=2.10.0,<2.12
-pandas>=0.21.0,<1.2.0
+pandas>=0.21.0
 
 requests==2.23.0,<3.0
 responses==0.10.6
-
 pyatlasclient==1.1.2
-
 amundsen-rds>=0.0.4
+neo4j==4.1.1
